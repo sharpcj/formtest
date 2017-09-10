@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生信息</title>
+</head>
+<body>
+    {% if isSave %}
+        <p>保存成功</p>
+    {% else %}
+        <form name="studentinfo" id="stuinfo_id" action="/student/" method="GET">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" name="提交">
+        </form>
+    {% endif %}
+</body>
+</html>

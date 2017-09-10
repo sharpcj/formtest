@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>联系管理员</title>
+</head>
+<body>
+    <form name="contactform" id="contact_id" action="/" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+    </form>
+</body>
+</html>

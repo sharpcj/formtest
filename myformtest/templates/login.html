@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>表单测试</title>
+</head>
+<body>
+    <form name="myform1" action="/login/" method="get">
+        <label for="user_id">Your ID:</label>
+        <input id="user_id" type="text" name="user_id">
+        <label for="pwd">Your Password:</label>
+        <input id="pwd" name="pwd" type="password"/>
+        <input type="submit" value="登录">
+        <input type="reset" value="清空">
+    </form>
+    {% if verified %}
+        <em>您通过了验证</em>
+    {% else %}
+        <em>账号或密码错误</em>
+    {% endif %}
+</body>
